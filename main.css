@@ -1,0 +1,106 @@
+.nav a {
+  color: #F0F8FF;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 14px 10px;
+  //text-transform: uppercase;
+}
+.nav{
+    //background-image:url('http://www.duolog.com/wp-content/uploads/Grey-Background.png');
+    background-color: #333;
+}
+/*.common{
+    background-image:url('http://www.albiw.com/wp-content/uploads/bg_002.jpg');
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;}*/
+.nav li {
+  display: inline;
+}
+
+.jumbotron {
+  background-image:url('http://www.albiw.com/wp-content/uploads/bg_002.jpg');//http://i.imgur.com/0iEQk01.jpg?1 ---- http://i.imgur.com/esi97Y8.jpg ------  ;
+  height: 470px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.learn-more {
+  background-color: #dedede; //#f7f7f7;
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}
+
+
+.learn-more2 {
+  background-color: #efefef; //#f7f7f7;
+}
+
+.learn-more2 h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more2 a {
+  color: #00b0ff;
+}
+
+.neighborhood-guides{
+    background-color: #efefef;
+    border-bottom: 1px solid #dbdbdb;
+}
+.neighborhood-guides h2{
+    color: #393c3d;
+    font-size: 24px;
+}
+.neighborhood-guides p{
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+
+.something {
+  background-image:url('http://news.bbcimg.co.uk/media/images/74783000/jpg/_74783703_cityafp.jpg');
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //margin-right: 0px;
+  //margin-left: 0px;
+}
+
+.something h1{
+  color: #fff;
+  font-size: 50px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.something p{
+  font-size: 20px;
+  color: #fff;
+}
