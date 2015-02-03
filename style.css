@@ -1,0 +1,277 @@
+body {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	font: 12px Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #061C37;
+	background: #1c478e;
+	background-image:url(../SFO.jpg);	
+	background-size: 1370px 645px; /*background-size: cover*/
+	background-repeat: no-repeat;	
+}
+
+*{
+	
+	margin: 0 auto 0 auto;
+	text-align:left;
+}
+
+label{
+	display:inline-block;
+	width:150px;
+}
+
+input{
+	margin:0 5px 0 5px;
+}
+		
+
+h2{
+	/*color:#5C1875;*/
+	color:#800000;
+	padding-bottom:10px;
+}
+
+h3{
+	font-size:16px;
+	font-weight:bold;
+	padding:10px 0 10px 0;
+	color:#800000;
+}
+
+h4{
+	font-size:15px;
+	font-weight:bold;
+	padding-bottom:5px;
+	color:#800000;
+}
+
+p{
+	margin:10px 0 10px 0;
+}
+
+#container{
+	width: 960px;
+}
+
+
+#header{
+	height:85px;
+	width:960px;	
+}
+
+#header h1{
+  	float:left;
+  	padding:20px 0 0 20px;
+	text-align:left;
+	color:#FFFFFF;
+	font-size:43px;
+	color:#FFF;	
+
+}
+
+
+#header h2{
+	float:left;
+	padding:40px 20px 0 0;
+	text-align:right;
+	color:#A9D1FA;
+	width:400px;
+}
+
+#menu{
+	background-color: #800000;
+	/*8A0886*/
+	border-radius: 15px;
+	display:block;
+	font-size:100px;
+	float:left;
+	clear:both;
+	width:820px;
+	height:54px;
+	clear:both;
+	opacity: 0.8;
+}
+
+#menu ul {
+	list-style: none;
+	padding: 0px;
+	margin-left:auto;
+	width:960px;
+}
+
+#menu li {
+	list-style: none;
+	padding: 0px;	
+	display: inline; 
+	
+}
+
+#menu a  {
+	float: left;
+	height: 36px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	padding-top: 18px;
+	font-size: 15px;
+	padding-left:13px;
+	padding-right:13px;
+	
+}
+
+#menu a:hover{
+	background: #e06c1f; color: white;
+	border-radius:15px;
+}
+
+
+/*#content a{ -webkit-transition: color .4s linear; -moz-transition: color .4s linear; -ms-transition: color .4s linear; -o-transition: color .4s linear; transition: color .4s linear; }*/
+
+#content a{ font color="FF00CC"; 
+}
+
+#content a:hover{
+	color: #e06c1f;
+}
+
+.blue-text{
+	color:#1D2F4A;
+}
+.white-text{
+	color:#380000;
+}
+.san-diego{
+	color:#990033;
+}
+
+#leftmenu{
+	margin-top:15px;
+	width:180px;
+	float:left;
+	background-color:#800000;
+	/*B2862D*/
+	border-radius:15px;
+	padding:15px 20px 5px 10px;
+	opacity: 0.8;
+}
+
+#leftmenu ul{
+	list-style: none;
+	padding: 0px;
+	width:165px;
+}
+
+
+#leftmenu h3{
+	list-style: none;
+	padding: 0px;
+	color:#FFFFFF;
+	padding-bottom:7px;
+	border-bottom:2px solid #fff;
+}
+
+#leftmenu ul li{
+	list-style: none;
+	padding:15px 0 8px 0;
+	border-bottom:#fff dashed 1px;
+	
+}
+
+#leftmenu ul li a, #leftmenu ul li a:visited{
+	color:#FFFFFF;
+	text-decoration:none;
+	font-size:14px;
+	font-weight:bold;
+}
+
+
+#leftmenu ul li a:hover{
+	-webkit-background-clip: text;
+	color: white;
+	-webkit-text-fill-color: transparent;
+  	background-image: -webkit-gradient(linear, left top, right top, from(#ea8711), to(#d96363));
+	background-image: -webkit-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79); 
+	background-image:    -moz-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79);
+	background-image:     -ms-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79); 
+	background-image:      -o-linear-gradient(left, #ea8711, #d96363, #73a6df, #9085fb, #52ca79);
+ }
+	
+	
+
+
+#content{
+	display:block;
+	float:left;
+	margin-top:15px;
+	margin-left:10px;
+	width:555px;
+	height:auto;
+	/*background:#B2862D;*/
+	background: #ffffff;
+	padding:15px;
+	border-radius:15px;
+	border:6px solid transparent;
+	opacity:0.8;
+	font-size: 14px;
+	
+} 
+
+
+	
+
+#content img.float{
+	float:right;
+	margin:15px;
+}
+
+
+
+.latest ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.latest .developer{
+	float:right;
+	width:170px;
+}
+
+.latest .developer ul{
+	margin-bottom:10px;
+}
+
+.latest .developer ul li{
+	line-height:1.5em;
+}
+
+#footer{
+	width:inherit;
+	height:auto;
+}
+
+#footer h3 a,#footer h3 a:visited{
+	display:inline;
+	text-align:center;
+	font-size:12px;
+	text-decoration:none;
+	color:#7198E1;
+}
+
+
+.blue-background{
+	background:#2658a9;
+	padding:5px;
+	color:#fff;
+}
+
+
+
+table.dev-table,table.dev-table tr,table.dev-table td,table.dev-table th{
+	font-size:110%;
+	border-bottom:1px dashed #000;
+}
