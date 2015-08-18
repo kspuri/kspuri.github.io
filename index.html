@@ -1,134 +1,95 @@
 <!DOCTYPE html>
-<html>
-
+<html lang = "en">
   <head>
-      
+  
+    <!-- TO MAKE MOBILE RESPONSIVE! DOESNT WORK RIGHT NOW! -->
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-    <link rel="icon" href="http://i.imgur.com/QLCgo.jpg" type="image/x-icon">  
-    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     
-    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="main.css">
-    <title>Kartikeya Puri</title>
-  </head>
-
-  <body> 
-    <div class="nav">
-      <div class="container">
-
-        <ul class = "pull-left">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#project">Project</a></li>
-          <li><a href="#team">The Team</a></li>
-          <li><a href="http://ucsd.edu/">UCSD</a></li>
-          <li><a href="http://ubic.ucsd.edu/">UBIC</a></li>
-        </ul>
-        <ul class = "pull-right">
-          <li><a href="back.html">Sign Up</a></li>
-          <li><a href="back.html">Log In</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="jumbotron">
-      <div class="container">
-          <h1>Kartikeya Puri</h1><!--<small>Puri</small></h1>-->
-        <p>Computer Science @ UC San Diego</p>
-        <a href="about.html">Learn More</a>
-      </div>
-    </div> 
-
-    <div class = "learn-more">
-        <div class = "container">
-            <a name = "about"></a>
-            <h2>Bombay to San Diego</h2>
-            <p>Hi! I am a junior at UC San Diego studying Computer Science. I am originally from 
-               Bombay, India and came to the United States after completing high school in India.
-               I am currently part of UCSD's research team that is involved in the International 
-               Genetically Engineered Machine competition (iGEM), which is the premiere undergraduate
-               Synthetic Biology competition. I was involved in mostly the front-end aspects of the web application (SBiDer) that we built this summer. As of now, we're in the process preparing a presentation & poster for our team for the the 2014 iGEM conference in Boston 2 weeks from now.</p> 
-                <!--<img src = "https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/s720x720/1795776_10152800941184301_1649618267014165419_n.jpg?oh=92d59dbaaecf5622368fc0a7a047191e&oe=54F23E5A&__gda__=1421919574_00d56dd3c02997791f9f4f45cb2364aa">-->
-        </div>
-    </div>
+    <!-- BOOTSTRAP STUFF START! -->
     
-    <div class = "learn-more2" style = "background-color: #efefef;">
-        <div class = "container">
-            <a name = "project"></a>
-            <h2>Research Project, Summer '14</h2>
-            <p>I was lucky enough to be part of the team reprsenting UC San Diego at <a href = "http://igem.org/About">iGEM</a> (International Genetically Engineered Machine competition) 2014, the premiere undergraduate Synthetic Biology competition hosted by MiT. With little to no experience in Biology, I was involved in the web development process for the most part. I worked closely with two other team-mates throughout summer, & together we developed the website, the application (SBiDer) & the <a href = "http://2014.igem.org/Team:UCSD_Software">wiki</a>. <br><br>Here's the project abstract from our wiki:<br><br>
-            "Genetic circuits are often difficult to engineer, requiring months to design, build, and test each individual genetic device involved in the circuit. SBiDer, a web tool developed by the UCSD Software iGEM team, will leverage existing devices to construct a database with consideration for the function of each device interpreted as boolean logic. The data can be queried by the user through SBiDer's visual interface to explore circuit designs. Users can search for existing circuits that can be used to assemble a complex circuit. The displayed circuit's literature reference, characterization data, and images of included devices can be viewed through the built-in table. We also provide a standalone modelling Python package that can be used to model circuits given by our online webtool. SBiDer's web of information can be expanded through user-generated additions to the database to improve the efficiency of the application and the accuracy of the models. "
-            </p> 
-        </div>
-    </div>
     
-    <div class="learn-more">
-	  <div class="container">
-	  <a name = "team"></a>
-              <h2>UCSD iGEM 2014</h2>
-		<div class = "row">
-                    <div class = "col-md-4">
-			<h3>About us</h3>
-			<p> We are a team of highly motivated undergraduate students and PhD candidates. 
-                            We are trying to build an online application for visualizing the network of synthetic
-                            genetic circuits. This could prove to be a super handy application for researchers around the world. 
-                        </p>
-                    </div>
-                    <div class = "col-md-4">
-			<h3>Authors</h3>
-			<p>Jenhan Tao, Justin Huang, Huwate (Kwat) Yeerna, Ivonnie Shih, Joaquin Reyna, Lauren Crudup, 
-                            Valeriy Sosnovskiy, Gary Le, Tiffany Liu, Fred, Fernando Contreras, Rohit Mande,
-                            Camellia Lee, Benjamin Kellman, Kartikeya Puri.
-                        </p>
-                    </div>
-                    <div class = "col-md-4">
-			<h3>Contact us</h3>
-			<p>Feel free to reach out to us if you have any questions or suggestions for us. You can e-mail us at one of the 
-                            following e-mail IDs: 
-                            jenhantao@gmail.com, justin.k.huang@gmail.com, bkellman@eng.ucsd.edu.</p>
-                    </div>
-                </div>
-	  </div>
-    </div>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- BOOTSTRAP STUFF END! -->
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
+    <style>
+    
+    	html { 
+  		background: #e5e5e5 no-repeat center center fixed; //#3b5998
+  		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+	}
+      /*body {
+ 	
+ 	background: url('http://i.imgur.com/Dj0zHyY.jpg') no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+      }*/
       
-    <div class="something">
-      <div class="container">
-        <p>I love and follow the English Premier League. I have been an ardent supporter of <a href = "http://mcfc.co.uk/">Manchester City Football Club</a> for the past 5 years and am looking forward to what the team has got to offer once agian this season! Go City!</p>
+      h1 {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 135px;
+        //letter-spacing: 40px;
+	}
+	
+     p { 
+	font-size: 18px;
+	letter-spacing: 1px;
+	margin-right: 10%;
+	margin-left: 10%;
+     }
+     
+     .abc{
+  	color: #000000;//#e5e5e5;
+  	text-align: center;
+  	width: 50%;
+    	margin: 0 auto;
+      }
+      
+    </style>
+    
+  </head>
+  
+  <body>
+    
+
+      <div class="abc">
+        <h1>kartikeya puri</h1>
+        <p>Hi, there! I am a junior at UC San Diego studying Computer Science. Drop me a line at kspuri at ucsd dot edu.</p>
+        <a href = "https://github.com/kspuri"><img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" class="img-circle" width = "180px" height = "180px"></a>
       </div>
-    </div>
+
+      
+    <script>
     
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-   <script src="bootstrap.min.js"></script>
-   <script src="docs.min.js"></script>
-   
-   
+    $(document).ready(function(){
+    	$(window).resize(function(){
+
+    		$('.abc').css({
+        		position:'absolute',
+        		left: ($(window).width() - $('.abc').outerWidth())/2,
+        		top: ($(window).height() - $('.abc').outerHeight())/2
+   		 });
+
+	});
+    $(window).resize();
+    });
     
+    </script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   </body>
 </html>
-
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>KP</title>
-  <link rel="Shortcut Icon" type="image/ico" href="/images/ucsd.png" />
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link href="css/jumbotron.css" rel="stylesheet">-->
-  <!--<style>
-   html {
-     background: url(/images/mancity.jpg);
-  background-size: cover;
-   }
-  </style>
-</head>
-<body>
-</body>
-</html>-->
