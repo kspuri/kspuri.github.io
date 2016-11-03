@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+  
+    <!-- TO MAKE MOBILE RESPONSIVE! DOESNT WORK RIGHT NOW! -->
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    
+    <!-- BOOTSTRAP STUFF START! -->
+    
+    
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- BOOTSTRAP STUFF END! -->
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
+    
+	<script>
+		function myFunction(){
+			// Calculates Katz Score //
+			var Tsize = parseFloat(document.getElementById('Tsize').value);
+			if (!Tsize && Tsize != 0)
+				alert("You need to enter a tumor size");
+			if(Tsize > 10)
+			{
+				alert("Size cannot be > 10");
+				return false;
+			}
+			else if (Tsize < 0)
+			{
+				alert("Size cannot be < 0");
+				return false;
+			}
+			var score = Tsize * 2.6;
+
+				
+			var Pnodes = parseFloat(document.getElementById('Pnodes').value);
+			if (!Pnodes && Pnodes != 0)
+				alert("You need to enter the number of Pnodes");
+			if(Pnodes > 3)
+			{
+				alert("Pnodes cannot be > 10");
+				return false;
+			}
+			else if (Pnodes < 0)
+			{
+				alert("Pnodes cannot be < 0");
+				return false;
+			}
+			
+			
+			var Pnodes = Pnodes * 9.2;
+
+			var score = Pnodes + score;
+
+			var Nnodes = parseFloat(document.getElementById('Nnodes').value);
+			if (!Nnodes && Nnodes != 0)
+				alert("You need to enter the number of Pnodes");
+			if(Nnodes > 3)
+			{
+				alert("Nnodes cannot be > 10");
+				return false;
+			}
+			else if (Nnodes < 0)
+			{
+				alert("Nnodes cannot be < 0");
+				return false;
+			}
+			
+			if (Nnodes !=0) {
+				var score = score - 8.6
+			}
+					
+			if (document.getElementById("LVI").checked == true) {
+				var score = score + 11
+				}
+			if (document.getElementById("ILC").checked == true) {
+				var score = score + 11
+				}
+			if (document.getElementById("ILC").checked == true) {
+				var score = score + 16
+				}
+			var score = score - 58
+					
+			// Converts Katz score to nodal risk //
+			var risk
+					if (score < -53) {
+						risk = "less than 0.5%"            
+					}
+					else if (score == -53) {
+						risk = "0.5%"
+					}
+					else if (score > -53 && score < -45) {
+						risk = "between 0.5 and 1%"            
+					}
+					else if (score == -45 ) {
+						risk = "1%"            
+					}
+					else if (score > -45 && score < -39) {
+						risk = "between 1 and 2%" 
+					}
+					 else if (score == -39 ) {
+						risk = "2%"            
+					}
+					else if (score > -39 && score < -29) {
+						risk = "between 2 and 5%" 
+					}
+					 else if (score == -29 ) {
+						risk = "5%"            
+					}
+					else if (score > -29 && score < -22) {
+						risk = "between 5 and 10%" 
+					}
+					 else if (score == -22 ) {
+						risk = "10%"            
+					}
+					else if (score > -22 && score < -14) {
+						risk = "between 10 and 20%" 
+					}
+					 else if (score == -14 ) {
+						risk = "20%"            
+					}
+					else if (score > -14 && score < -8) {
+						risk = "between 20 and 30%" 
+					}
+					 else if (score == -8 ) {
+						risk = "30%"            
+					}
+					else if (score > -8 && score < -4) {
+						risk = "between 30 and 40%" 
+					}
+					else if (score == -4 ) {
+						risk = "40%"            
+					}
+					else if (score > -4 && score < 0) {
+						risk = "between 40 and 50%" 
+					}
+					else if (score == 0 ) {
+						risk = "50%"            
+					}
+					else if (score > 0 && score < 4) {
+						risk = "between 50 and 60%" 
+					}
+					else if (score == 4 ) {
+						risk = "60%"            
+					}
+					else if (score > 4 && score < 8) {
+						risk = "between 50 and 60%" 
+					}
+					else if (score == 8 ) {
+						risk = "60%"            
+					}
+					else if (score > 8 && score < 14) {
+						risk = "between 70 and 80%" 
+					}
+					else if (score == 14 ) {
+						risk = "80%"            
+					}
+					else if (score > 14 && score < 22) {
+						risk = "between 80 and 90%" 
+					}
+					else if (score == 22 ) {
+						risk = "90%"            
+					}
+					else if (score > 22 && score < 29) {
+						risk = "between 90 and 95%" 
+					}
+					else if (score == 29 ) {
+						risk = "95%"            
+					}
+					else if (score > 29 && score < 39) {
+						risk = "between 95 and 98%" 
+					}
+					else if (score == 39 ) {
+						risk = "98%"            
+					}
+					else if (score > 39 && score < 45) {
+						risk = "between 98 and 99%" 
+					}
+					else if (score == 45 ) {
+						risk = "99%"            
+					}
+					else if (score > 49) {
+						risk = "greater than 99%" 
+					}
+			document.getElementById("prompt1").innerHTML = "Katz Nomogram score = ";
+			document.getElementById("prompt2").innerHTML = "Risk of having 4 or more lymph nodes positive is ";        
+			document.getElementById("output").innerHTML = score;
+			document.getElementById("Krisk").innerHTML = risk;
+
+	}
+	</script>    
+	
+	<style>
+		
+		html { 
+  		background: #e5e5e5 no-repeat center center fixed; //#3b5998
+  		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+	}
+  
+      h1 {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 55px;
+        //letter-spacing: 40px;
+	}
+	
+     p { 
+	font-size: 18px;
+	letter-spacing: 1px;
+	margin-right: 10%;
+	margin-left: 10%;
+     }
+		
+		.abc
+		{
+			color: #000000;//#e5e5e5;
+			text-align: center;
+			width: 50%;
+			margin: 0 auto;
+		}
+		
+		.form-group 
+		{
+			text-align: left;
+		}
+		
+	</style>
+	
+	</head>
+    
+	<body>
+			
+			<div class="abc">
+        
+			<h1>Post SLNB Breast Nomogram</h1><br>
+        
+			<form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-5 control-label">Size of primary tumor</label>
+    <div class="col-sm-7">
+      <input type="number"  id = "Tsize" min="0" max="10" class="form-control" placeholder="Enter a size value >= 0cm and < 11cm"> 
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-5 control-label">Number of positive sentinal lymph nodes</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="Pnodes" min="0" max="3" placeholder="0 <= value < 4">
+    </div>
+  </div>
+  
+   <div class="form-group">
+    <label for="inputPassword3" class="col-sm-5 control-label">Number of negative sentinal lymph nodes</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="Nnodes" min="0" max="3" placeholder="0 <= value < 4">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-5 col-sm-7">
+	  Select all that apply:
+      <div class="checkbox">
+        <label>
+			<input type="checkbox" id="LVI" > LVI present
+        </label>
+      </div>
+      
+      <div class="checkbox">
+        <label>
+			<input type="checkbox" id="ILC" > Lobular histology 
+        </label>
+      </div>
+      
+      <div class="checkbox">
+        <label>
+			<input type="checkbox" id="MM" > Macromet present (>2mm)
+        </label>
+      </div>
+      
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-5 col-sm-7">
+       <button onclick="myFunction()" type="button" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
+<dev id= "prompt1"> </dev>
+			<dev id="output"></dev>
+			<br> <br>
+			<dev id="prompt2"></dev>
+			<dev id="Krisk"></dev>
+</div>
+			<!--<h1> <b>Post SLNB Breast Nomogram <b/></h1>-->
+			
+			
+			
+		
+	
+	<script>
+    
+    $(document).ready(function(){
+    	$(window).resize(function(){
+
+    		$('.abc').css({
+        		position:'absolute',
+        		left: ($(window).width() - $('.abc').outerWidth())/2,
+        		top: ($(window).height() - $('.abc').outerHeight())/7
+   		 });
+
+	});
+    $(window).resize();
+    });
+    
+    </script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		
+		
+	</body>
+</html>
