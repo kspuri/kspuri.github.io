@@ -83,9 +83,12 @@
 			if (document.getElementById("ILC").checked == true) {
 				var score = score + 11
 				}
-			if (document.getElementById("ILC").checked == true) {
-				var score = score + 16
+			if (document.getElementById("ECE").checked == true) {
+				var score = score + 11
 				}
+			if (document.getElementById("MM").checked == true) {
+				var score = score + 16
+			}
 			var score = score - 58
 					
 			// Converts Katz score to nodal risk //
@@ -189,36 +192,40 @@
 					else if (score > 49) {
 						risk = "greater than 99%" 
 					}
-			document.getElementById("prompt1").innerHTML = "Katz Nomogram score = ";
-			document.getElementById("prompt2").innerHTML = "Risk of having 4 or more lymph nodes positive is ";        
-			document.getElementById("output").innerHTML = score;
-			document.getElementById("Krisk").innerHTML = risk;
+					
+					document.getElementById("prompt1").innerHTML = "Katz Nomogram score =";
+					document.getElementById("prompt2").innerHTML = "Risk of having 4 or more lymph nodes positive is";        
+					document.getElementById("output").innerHTML = score;
+					document.getElementById("Krisk").innerHTML = risk;
 
 	}
 	</script>    
 	
 	<style>
 		
-		html { 
-  		background: #e5e5e5 no-repeat center center fixed; //#3b5998
-  		-webkit-background-size: cover;
-  		-moz-background-size: cover;
-  		-o-background-size: cover;
-  		background-size: cover;
-	}
+		html 
+		{ 
+			background: #e5e5e5 no-repeat center center fixed; //#3b5998
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
   
-      h1 {
-        font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 55px;
-        //letter-spacing: 40px;
-	}
+		h1 
+		{
+			font-family: 'Open Sans Condensed', sans-serif;
+			font-size: 55px;
+			//letter-spacing: 40px;
+		}
 	
-     p { 
-	font-size: 18px;
-	letter-spacing: 1px;
-	margin-right: 10%;
-	margin-left: 10%;
-     }
+		p 
+		{ 
+			font-size: 18px;
+			letter-spacing: 1px;
+			margin-right: 10%;
+			margin-left: 10%;
+		}
 		
 		.abc
 		{
@@ -244,88 +251,96 @@
 			<h1>Post SLNB Breast Nomogram</h1><br>
         
 			<form class="form-horizontal">
-  <div class="form-group">
-    <label for="inputEmail3" class="col-sm-5 control-label">Size of primary tumor</label>
-    <div class="col-sm-7">
-      <input type="number"  id = "Tsize" min="0" max="10" class="form-control" placeholder="Enter a size value >= 0cm and <= 10cm"> 
-    </div>
-  </div>
-  
-  <div class="form-group">
-    <label for="inputPassword3" class="col-sm-5 control-label">Number of positive sentinal lymph nodes</label>
-    <div class="col-sm-7">
-      <input type="number" class="form-control" id="Pnodes" min="0" max="3" placeholder="0 <= value <= 3">
-    </div>
-  </div>
-  
-   <div class="form-group">
-    <label for="inputPassword3" class="col-sm-5 control-label">Number of negative sentinal lymph nodes</label>
-    <div class="col-sm-7">
-      <input type="number" class="form-control" id="Nnodes" min="0" max="3" placeholder="0 <= value <= 3">
-    </div>
-  </div>
-  
-  <div class="form-group">
-    <div class="col-sm-offset-5 col-sm-7">
-	  Select all that apply:
-      <div class="checkbox">
-        <label>
-			<input type="checkbox" id="LVI" > LVI present
-        </label>
-      </div>
-      
-      <div class="checkbox">
-        <label>
-			<input type="checkbox" id="ILC" > Lobular histology 
-        </label>
-      </div>
-      
-      <div class="checkbox">
-        <label>
-			<input type="checkbox" id="MM" > Macromet present (>2mm)
-        </label>
-      </div>
-      
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-5 col-sm-7">
-       <button onclick="myFunction()" type="button" class="btn btn-primary">Submit</button>
-    </div>
-  </div>
-</form>
-<dev id= "prompt1"> </dev>
-			<dev id="output"></dev>
-			<br> <br>
-			<dev id="prompt2"></dev>
-			<dev id="Krisk"></dev>
-</div>
-			<!--<h1> <b>Post SLNB Breast Nomogram <b/></h1>-->
+				  <div class="form-group">
+					<label for="inputEmail3" class="col-sm-5 control-label">Size of primary tumor</label>
+					<div class="col-sm-7">
+					  <input type="number"  id = "Tsize" min="0" max="10" class="form-control" placeholder="Enter a size value >= 0cm and <= 10cm"> 
+					</div>
+				  </div>
+				  
+				  <div class="form-group">
+					<label for="inputPassword3" class="col-sm-5 control-label">Number of positive sentinal lymph nodes</label>
+					<div class="col-sm-7">
+					  <input type="number" class="form-control" id="Pnodes" min="0" max="3" placeholder="0 <= value <= 3">
+					</div>
+				  </div>
+				  
+				   <div class="form-group">
+					<label for="inputPassword3" class="col-sm-5 control-label">Number of negative sentinal lymph nodes</label>
+					<div class="col-sm-7">
+					  <input type="number" class="form-control" id="Nnodes" min="0" max="3" placeholder="0 <= value <= 3">
+					</div>
+				  </div>
+				  
+				  <div class="form-group">
+					<div class="col-sm-offset-5 col-sm-7">
+					  Select all that apply:
+					  <div class="checkbox">
+						<label>
+							<input type="checkbox" id="LVI" > LVI present
+						</label>
+					  </div>
+					  
+					  <div class="checkbox">
+						<label>
+							<input type="checkbox" id="ILC" > Lobular histology 
+						</label>
+					  </div>
+					  
+					  <div class="checkbox">
+						<label>
+							<input type="checkbox" id="ECE" > Extranodal extension present
+						</label>
+					  </div>
+					  
+					  <div class="checkbox">
+						<label>
+							<input type="checkbox" id="MM" > Macromet present (>2mm)
+						</label>
+					  </div>
+					  
+					</div>
+				  </div>
+				  <div class="form-group">
+					<div class="col-sm-offset-5 col-sm-7">
+					   <button onclick="myFunction()" type="button" class="btn btn-primary">Submit</button>
+					</div>
+				  </div>
+			</form>
+			<dev id= "prompt1"> </dev>
+						<dev id="output"></dev>
+						<br> <br>
+						<dev id="prompt2"></dev>
+						<dev id="Krisk"></dev>
+						<br><br><br>
+						<a style="font-size:70%;" href="https://www.ncbi.nlm.nih.gov/pubmed/18445838"> Katz et al. J Clin Oncol 2008</a>
+			</div>
+						<!--<h1> <b>Post SLNB Breast Nomogram <b/></h1>-->
 			
 			
 			
 		
 	
-	<script>
-    
-    $(document).ready(function(){
-    	$(window).resize(function(){
+			<script>
+			
+			$(document).ready(function(){
+				$(window).resize(function(){
 
-    		$('.abc').css({
-        		position:'absolute',
-        		left: ($(window).width() - $('.abc').outerWidth())/2,
-        		top: ($(window).height() - $('.abc').outerHeight())/7
-   		 });
+					$('.abc').css({
+						position:'absolute',
+						left: ($(window).width() - $('.abc').outerWidth())/2,
+						top: ($(window).height() - $('.abc').outerHeight())/7
+				 });
 
-	});
-    $(window).resize();
-    });
-    
-    </script>
-    
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		
-		
+			});
+			$(window).resize();
+			});
+			
+			</script>
+			
+			<!-- Latest compiled and minified JavaScript -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+				
+				
 	</body>
 </html>
